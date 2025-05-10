@@ -19,8 +19,8 @@ class WhatTrainRow extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
           decoration: BoxDecoration(
             gradient: LinearGradient(colors: [
-              AppColors.primaryColor2.withOpacity(0.3),
-              AppColors.primaryColor1.withOpacity(0.3)
+              AppColors.primaryColor2.withValues(alpha: 0.3),
+              AppColors.primaryColor1.withValues(alpha: 0.3)
             ]),
             borderRadius: BorderRadius.circular(15),
           ),
@@ -41,7 +41,7 @@ class WhatTrainRow extends StatelessWidget {
                       height: 4,
                     ),
                     Text(
-                      "${wObj["exercises"].toString()} | ${ wObj["time"].toString() }" ,
+                      "${wObj["exercises"].toString()} | ${wObj["time"].toString()}",
                       style: TextStyle(
                         color: AppColors.grayColor,
                         fontSize: 12,
@@ -53,9 +53,7 @@ class WhatTrainRow extends StatelessWidget {
                     SizedBox(
                       width: 100,
                       height: 30,
-                      child: RoundButton(
-                          title: "View More",
-                          onPressed: () {}),
+                      child: RoundButton(title: "View More", onPressed: () {}),
                     )
                   ],
                 ),
@@ -70,7 +68,7 @@ class WhatTrainRow extends StatelessWidget {
                     width: 80,
                     height: 80,
                     decoration: BoxDecoration(
-                      color: AppColors.whiteColor.withOpacity(0.54),
+                      color: AppColors.whiteColor.withValues(alpha: 0.54),
                       borderRadius: BorderRadius.circular(40),
                     ),
                   ),

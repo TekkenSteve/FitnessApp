@@ -9,7 +9,6 @@ import 'package:simple_animation_progress_bar/simple_animation_progress_bar.dart
 import 'package:simple_circular_progress_bar/simple_circular_progress_bar.dart';
 
 import '../../common_widgets/round_button.dart';
-import '../../common_widgets/round_gradient_button.dart';
 import '../notification/notification_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -22,7 +21,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
   List<int> showingTooltipOnSpots = [21];
 
   List<FlSpot> get allSpots => const [
@@ -68,53 +66,53 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<LineChartBarData> get lineBarsData1 => [
-    lineChartBarData1_1,
-    lineChartBarData1_2,
-  ];
+        lineChartBarData1_1,
+        lineChartBarData1_2,
+      ];
 
   LineChartBarData get lineChartBarData1_1 => LineChartBarData(
-    isCurved: true,
-    gradient: LinearGradient(colors: [
-      AppColors.primaryColor2.withOpacity(0.5),
-      AppColors.primaryColor1.withOpacity(0.5),
-    ]),
-    barWidth: 4,
-    isStrokeCapRound: true,
-    dotData: FlDotData(show: false),
-    belowBarData: BarAreaData(show: false),
-    spots: const [
-      FlSpot(1, 35),
-      FlSpot(2, 70),
-      FlSpot(3, 40),
-      FlSpot(4, 80),
-      FlSpot(5, 25),
-      FlSpot(6, 70),
-      FlSpot(7, 35),
-    ],
-  );
+        isCurved: true,
+        gradient: LinearGradient(colors: [
+          AppColors.primaryColor2.withValues(alpha: 0.5),
+          AppColors.primaryColor1.withValues(alpha: 0.5),
+        ]),
+        barWidth: 4,
+        isStrokeCapRound: true,
+        dotData: FlDotData(show: false),
+        belowBarData: BarAreaData(show: false),
+        spots: const [
+          FlSpot(1, 35),
+          FlSpot(2, 70),
+          FlSpot(3, 40),
+          FlSpot(4, 80),
+          FlSpot(5, 25),
+          FlSpot(6, 70),
+          FlSpot(7, 35),
+        ],
+      );
 
   LineChartBarData get lineChartBarData1_2 => LineChartBarData(
-    isCurved: true,
-    gradient: LinearGradient(colors: [
-      AppColors.secondaryColor2.withOpacity(0.5),
-      AppColors.secondaryColor1.withOpacity(0.5),
-    ]),
-    barWidth: 2,
-    isStrokeCapRound: true,
-    dotData: FlDotData(show: false),
-    belowBarData: BarAreaData(
-      show: false,
-    ),
-    spots: const [
-      FlSpot(1, 80),
-      FlSpot(2, 50),
-      FlSpot(3, 90),
-      FlSpot(4, 40),
-      FlSpot(5, 80),
-      FlSpot(6, 35),
-      FlSpot(7, 60),
-    ],
-  );
+        isCurved: true,
+        gradient: LinearGradient(colors: [
+          AppColors.secondaryColor2.withValues(alpha: 0.5),
+          AppColors.secondaryColor1.withValues(alpha: 0.5),
+        ]),
+        barWidth: 2,
+        isStrokeCapRound: true,
+        dotData: FlDotData(show: false),
+        belowBarData: BarAreaData(
+          show: false,
+        ),
+        spots: const [
+          FlSpot(1, 80),
+          FlSpot(2, 50),
+          FlSpot(3, 90),
+          FlSpot(4, 40),
+          FlSpot(5, 80),
+          FlSpot(6, 35),
+          FlSpot(7, 60),
+        ],
+      );
 
   List lastWorkoutArr = [
     {
@@ -153,8 +151,8 @@ class _HomeScreenState extends State<HomeScreen> {
         belowBarData: BarAreaData(
           show: true,
           gradient: LinearGradient(colors: [
-            AppColors.primaryColor2.withOpacity(0.4),
-            AppColors.primaryColor1.withOpacity(0.1),
+            AppColors.primaryColor2.withValues(alpha: 0.4),
+            AppColors.primaryColor1.withValues(alpha: 0.1),
           ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
         ),
         dotData: FlDotData(show: false),
@@ -165,7 +163,6 @@ class _HomeScreenState extends State<HomeScreen> {
     ];
 
     final tooltipsOnBar = lineBarsData[0];
-
 
     return Scaffold(
       backgroundColor: AppColors.whiteColor,
@@ -190,7 +187,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                         Text(
-                          "Stefani Wong",
+                          "TekkenSteve",
                           style: TextStyle(
                             color: AppColors.blackColor,
                             fontSize: 20,
@@ -202,7 +199,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     IconButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, NotificationScreen.routeName);
+                          Navigator.pushNamed(
+                              context, NotificationScreen.routeName);
                         },
                         icon: Image.asset(
                           "assets/icons/notification_icon.png",
@@ -248,8 +246,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Text(
                                   "You have a normal weight",
                                   style: TextStyle(
-                                    color:
-                                        AppColors.whiteColor.withOpacity(0.7),
+                                    color: AppColors.whiteColor
+                                        .withValues(alpha: 0.7),
                                     fontSize: 12,
                                     fontFamily: "Poppins",
                                     fontWeight: FontWeight.w400,
@@ -295,7 +293,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Container(
                   padding: EdgeInsets.all(15),
                   decoration: BoxDecoration(
-                      color: AppColors.primaryColor1.withOpacity(0.3),
+                      color: AppColors.primaryColor1.withValues(alpha: 0.3),
                       borderRadius: BorderRadius.circular(15)),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -315,7 +313,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           title: "check",
                           type: RoundButtonType.primaryBG,
                           onPressed: () {
-                            Navigator.pushNamed(context, ActivityTrackerScreen.routeName);
+                            Navigator.pushNamed(
+                                context, ActivityTrackerScreen.routeName);
                           },
                         ),
                       )
@@ -338,7 +337,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: media.width * 0.4,
                     width: media.width,
                     decoration: BoxDecoration(
-                        color: AppColors.primaryColor2.withOpacity(0.3),
+                        color: AppColors.primaryColor2.withValues(alpha: 0.3),
                         borderRadius: BorderRadius.circular(25)),
                     child: Stack(
                       alignment: Alignment.topLeft,
@@ -448,7 +447,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                 }).toList();
                               },
                               touchTooltipData: LineTouchTooltipData(
-                                tooltipBgColor: AppColors.secondaryColor1,
+                                getTooltipColor: (touchedSpot) {
+                                  return AppColors.secondaryColor1;
+                                },
                                 tooltipRoundedRadius: 20,
                                 getTooltipItems:
                                     (List<LineBarSpot> lineBarsSpot) {
@@ -574,7 +575,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                             height: 10,
                                             decoration: BoxDecoration(
                                                 color: AppColors.secondaryColor1
-                                                    .withOpacity(0.5),
+                                                    .withValues(alpha: 0.5),
                                                 borderRadius:
                                                     BorderRadius.circular(5)),
                                           ),
@@ -585,7 +586,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                               axis: Axis.vertical,
                                               dashColor: AppColors
                                                   .secondaryColor1
-                                                  .withOpacity(0.5),
+                                                  .withValues(alpha: 0.5),
                                             )
                                         ]),
                                     SizedBox(width: 10),
@@ -830,7 +831,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: LineChart(
                       LineChartData(
                         showingTooltipIndicators:
-                        showingTooltipOnSpots.map((index) {
+                            showingTooltipOnSpots.map((index) {
                           return ShowingTooltipIndicators([
                             LineBarSpot(
                               tooltipsOnBar,
@@ -876,18 +877,20 @@ class _HomeScreenState extends State<HomeScreen> {
                                   show: true,
                                   getDotPainter:
                                       (spot, percent, barData, index) =>
-                                      FlDotCirclePainter(
-                                        radius: 3,
-                                        color: Colors.white,
-                                        strokeWidth: 3,
-                                        strokeColor: AppColors.secondaryColor1,
-                                      ),
+                                          FlDotCirclePainter(
+                                    radius: 3,
+                                    color: Colors.white,
+                                    strokeWidth: 3,
+                                    strokeColor: AppColors.secondaryColor1,
+                                  ),
                                 ),
                               );
                             }).toList();
                           },
                           touchTooltipData: LineTouchTooltipData(
-                            tooltipBgColor: AppColors.secondaryColor1,
+                            getTooltipColor: (touchedSpot) {
+                              return AppColors.secondaryColor1;
+                            },
                             tooltipRoundedRadius: 20,
                             getTooltipItems: (List<LineBarSpot> lineBarsSpot) {
                               return lineBarsSpot.map((lineBarSpot) {
@@ -923,7 +926,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           drawVerticalLine: false,
                           getDrawingHorizontalLine: (value) {
                             return FlLine(
-                              color: AppColors.grayColor.withOpacity(0.15),
+                              color:
+                                  AppColors.grayColor.withValues(alpha: 0.15),
                               strokeWidth: 2,
                             );
                           },
@@ -970,7 +974,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       var wObj = lastWorkoutArr[index] as Map? ?? {};
                       return InkWell(
                           onTap: () {
-                            Navigator.pushNamed(context, FinishWorkoutScreen.routeName);
+                            Navigator.pushNamed(
+                                context, FinishWorkoutScreen.routeName);
                           },
                           child: WorkoutRow(wObj: wObj));
                     }),
@@ -1000,7 +1005,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 title: '',
                 radius: 55,
                 titlePositionPercentageOffset: 0.55,
-                badgeWidget: Text("20.1", style: TextStyle(
+                badgeWidget: Text(
+                  "20.1",
+                  style: TextStyle(
                       color: AppColors.whiteColor,
                       fontWeight: FontWeight.w700,
                       fontSize: 12),
@@ -1021,11 +1028,11 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   SideTitles get rightTitles => SideTitles(
-    getTitlesWidget: rightTitleWidgets,
-    showTitles: true,
-    interval: 20,
-    reservedSize: 40,
-  );
+        getTitlesWidget: rightTitleWidgets,
+        showTitles: true,
+        interval: 20,
+        reservedSize: 40,
+      );
 
   Widget rightTitleWidgets(double value, TitleMeta meta) {
     String text;
@@ -1061,11 +1068,11 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   SideTitles get bottomTitles => SideTitles(
-    showTitles: true,
-    reservedSize: 32,
-    interval: 1,
-    getTitlesWidget: bottomTitleWidgets,
-  );
+        showTitles: true,
+        reservedSize: 32,
+        interval: 1,
+        getTitlesWidget: bottomTitleWidgets,
+      );
 
   Widget bottomTitleWidgets(double value, TitleMeta meta) {
     var style = TextStyle(
@@ -1101,8 +1108,8 @@ class _HomeScreenState extends State<HomeScreen> {
     }
 
     return SideTitleWidget(
-      axisSide: meta.axisSide,
       space: 10,
+      meta: meta,
       child: text,
     );
   }

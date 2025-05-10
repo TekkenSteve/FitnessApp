@@ -109,7 +109,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
             }),
             separatorBuilder: (context, index) {
               return Divider(
-                color: AppColors.grayColor.withOpacity(0.5),
+                color: AppColors.grayColor.withValues(alpha: 0.5),
                 height: 1,
               );
             },

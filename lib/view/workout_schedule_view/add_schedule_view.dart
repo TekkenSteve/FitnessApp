@@ -3,7 +3,6 @@ import 'package:fitnessapp/utils/app_colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../common_widgets/round_button.dart';
 import '../../utils/common.dart';
 import '../workour_detail_view/widgets/icon_title_next_row.dart';
 
@@ -48,7 +47,9 @@ class _AddScheduleViewState extends State<AddScheduleView> {
         title: Text(
           "Add Schedule",
           style: TextStyle(
-              color: AppColors.blackColor, fontSize: 16, fontWeight: FontWeight.w700),
+              color: AppColors.blackColor,
+              fontSize: 16,
+              fontWeight: FontWeight.w700),
         ),
         actions: [
           InkWell(
@@ -97,7 +98,9 @@ class _AddScheduleViewState extends State<AddScheduleView> {
           Text(
             "Time",
             style: TextStyle(
-                color: AppColors.blackColor, fontSize: 14, fontWeight: FontWeight.w500),
+                color: AppColors.blackColor,
+                fontSize: 14,
+                fontWeight: FontWeight.w500),
           ),
           SizedBox(
             height: media.width * 0.35,
@@ -115,7 +118,9 @@ class _AddScheduleViewState extends State<AddScheduleView> {
           Text(
             "Details Workout",
             style: TextStyle(
-                color: AppColors.blackColor, fontSize: 14, fontWeight: FontWeight.w500),
+                color: AppColors.blackColor,
+                fontSize: 14,
+                fontWeight: FontWeight.w500),
           ),
           const SizedBox(
             height: 8,

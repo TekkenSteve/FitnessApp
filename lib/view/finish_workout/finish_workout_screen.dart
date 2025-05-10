@@ -2,8 +2,6 @@ import 'package:fitnessapp/common_widgets/round_gradient_button.dart';
 import 'package:fitnessapp/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
-import '../../common_widgets/round_button.dart';
-
 class FinishWorkoutScreen extends StatelessWidget {
   static String routeName = "/FinishWorkoutScreen";
   const FinishWorkoutScreen({Key? key}) : super(key: key);
@@ -19,18 +17,17 @@ class FinishWorkoutScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-
-              const SizedBox(height: 20,),
+              const SizedBox(
+                height: 20,
+              ),
               Image.asset(
                 "assets/images/complete_workout.png",
                 height: media.width * 0.8,
                 fit: BoxFit.fitHeight,
               ),
-
               const SizedBox(
                 height: 20,
               ),
-
               Text(
                 "Congratulations, You Have Finished Your Workout",
                 textAlign: TextAlign.center,
@@ -40,11 +37,9 @@ class FinishWorkoutScreen extends StatelessWidget {
                   fontWeight: FontWeight.w700,
                 ),
               ),
-
               const SizedBox(
                 height: 20,
               ),
-
               Text(
                 "Exercises is king and nutrition is queen. Combine the two and you will have a kingdom",
                 textAlign: TextAlign.center,
@@ -53,11 +48,9 @@ class FinishWorkoutScreen extends StatelessWidget {
                   fontSize: 12,
                 ),
               ),
-
               const SizedBox(
                 height: 8,
               ),
-
               Text(
                 "-Jack Lalanne",
                 textAlign: TextAlign.center,
@@ -66,14 +59,12 @@ class FinishWorkoutScreen extends StatelessWidget {
                   fontSize: 12,
                 ),
               ),
-
               const Spacer(),
               RoundGradientButton(
                   title: "Back To Home",
                   onPressed: () {
                     Navigator.pop(context);
                   }),
-
               const SizedBox(
                 height: 8,
               ),

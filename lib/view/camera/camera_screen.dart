@@ -1,5 +1,4 @@
 import 'package:fitnessapp/common_widgets/round_button.dart';
-import 'package:fitnessapp/common_widgets/round_gradient_button.dart';
 import 'package:fitnessapp/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -45,7 +44,9 @@ class _CameraScreenState extends State<CameraScreen> {
         title: Text(
           "Progress Photo",
           style: TextStyle(
-              color: AppColors.blackColor, fontSize: 16, fontWeight: FontWeight.w700),
+              color: AppColors.blackColor,
+              fontSize: 16,
+              fontWeight: FontWeight.w700),
         ),
         actions: [
           InkWell(
@@ -78,7 +79,7 @@ class _CameraScreenState extends State<CameraScreen> {
               children: [
                 Padding(
                   padding:
-                  const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                      const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
                   child: Container(
                     width: double.maxFinite,
                     padding: const EdgeInsets.all(15),
@@ -139,15 +140,15 @@ class _CameraScreenState extends State<CameraScreen> {
                 ),
                 Padding(
                   padding:
-                  const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                      const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
                   child: Container(
                     width: double.maxFinite,
                     padding: const EdgeInsets.all(20),
                     height: media.width * 0.4,
                     decoration: BoxDecoration(
                         gradient: LinearGradient(colors: [
-                          AppColors.primaryColor2.withOpacity(0.4),
-                          AppColors.primaryColor1.withOpacity(0.4)
+                          AppColors.primaryColor2.withValues(alpha: 0.4),
+                          AppColors.primaryColor1.withValues(alpha: 0.4)
                         ]),
                         borderRadius: BorderRadius.circular(20)),
                     child: Row(
@@ -171,8 +172,7 @@ class _CameraScreenState extends State<CameraScreen> {
                                 width: 110,
                                 height: 35,
                                 child: RoundButton(
-                                    title: "Learn More",
-                                    onPressed: () {}),
+                                    title: "Learn More", onPressed: () {}),
                               )
                             ]),
                         Image.asset(
@@ -189,9 +189,9 @@ class _CameraScreenState extends State<CameraScreen> {
                 Container(
                   margin: const EdgeInsets.symmetric(horizontal: 20),
                   padding:
-                  const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+                      const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
                   decoration: BoxDecoration(
-                    color: AppColors.primaryColor2.withOpacity(0.3),
+                    color: AppColors.primaryColor2.withValues(alpha: 0.3),
                     borderRadius: BorderRadius.circular(15),
                   ),
                   child: Row(
@@ -225,7 +225,7 @@ class _CameraScreenState extends State<CameraScreen> {
                 ),
                 Padding(
                   padding:
-                  const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                      const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -240,7 +240,8 @@ class _CameraScreenState extends State<CameraScreen> {
                           onPressed: () {},
                           child: Text(
                             "See more",
-                            style: TextStyle(color: AppColors.grayColor, fontSize: 12),
+                            style: TextStyle(
+                                color: AppColors.grayColor, fontSize: 12),
                           ))
                     ],
                   ),
@@ -261,8 +262,8 @@ class _CameraScreenState extends State<CameraScreen> {
                             padding: const EdgeInsets.all(8.0),
                             child: Text(
                               pObj["time"].toString(),
-                              style:
-                              TextStyle(color: AppColors.grayColor, fontSize: 12),
+                              style: TextStyle(
+                                  color: AppColors.grayColor, fontSize: 12),
                             ),
                           ),
                           SizedBox(
@@ -274,7 +275,7 @@ class _CameraScreenState extends State<CameraScreen> {
                               itemBuilder: ((context, indexRow) {
                                 return Container(
                                   margin:
-                                  const EdgeInsets.symmetric(horizontal: 4),
+                                      const EdgeInsets.symmetric(horizontal: 4),
                                   width: 100,
                                   decoration: BoxDecoration(
                                     color: AppColors.lightGrayColor,

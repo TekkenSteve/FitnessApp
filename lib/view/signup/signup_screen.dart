@@ -127,7 +127,8 @@ class _SignupScreenState extends State<SignupScreen> {
                 RoundGradientButton(
                   title: "Register",
                   onPressed: () {
-                    Navigator.pushNamed(context, CompleteProfileScreen.routeName);
+                    Navigator.pushNamed(
+                        context, CompleteProfileScreen.routeName);
                   },
                 ),
                 SizedBox(
@@ -139,7 +140,7 @@ class _SignupScreenState extends State<SignupScreen> {
                         child: Container(
                       width: double.maxFinite,
                       height: 1,
-                      color: AppColors.grayColor.withOpacity(0.5),
+                      color: AppColors.grayColor.withValues(alpha: 0.5),
                     )),
                     Text("  Or  ",
                         style: TextStyle(
@@ -150,7 +151,7 @@ class _SignupScreenState extends State<SignupScreen> {
                         child: Container(
                       width: double.maxFinite,
                       height: 1,
-                      color: AppColors.grayColor.withOpacity(0.5),
+                      color: AppColors.grayColor.withValues(alpha: 0.5),
                     )),
                   ],
                 ),
@@ -161,34 +162,48 @@ class _SignupScreenState extends State<SignupScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     GestureDetector(
-                      onTap: () {
-
-                      },
+                      onTap: () {},
                       child: Container(
                         width: 50,
                         height: 50,
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(14),
-                          border: Border.all(color: AppColors.primaryColor1.withOpacity(0.5), width: 1, ),
+                          border: Border.all(
+                            color:
+                                AppColors.primaryColor1.withValues(alpha: 0.5),
+                            width: 1,
+                          ),
                         ),
-                        child: Image.asset("assets/icons/google_icon.png",width: 20,height: 20,),
+                        child: Image.asset(
+                          "assets/icons/google_icon.png",
+                          width: 20,
+                          height: 20,
+                        ),
                       ),
                     ),
-                    SizedBox(width: 30,),
+                    SizedBox(
+                      width: 30,
+                    ),
                     GestureDetector(
-                      onTap: () {
-
-                      },
+                      onTap: () {},
                       child: Container(
                         width: 50,
                         height: 50,
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(14),
-                          border: Border.all(color: AppColors.primaryColor1.withOpacity(0.5), width: 1, ),
+                          border: Border.all(
+                            color:
+                                AppColors.primaryColor1.withValues(alpha: 0.5),
+                            width: 1,
+                          ),
                         ),
-                        child: Image.asset("assets/icons/facebook_icon.png",width: 20,height: 20,),
+                        child: Image.asset(
+                          "assets/icons/facebook_icon.png",
+                          width: 20,
+                          height: 20,
+                        ),
                       ),
                     ),
                   ],
